@@ -1,6 +1,6 @@
 ---
 
-- name: debug
+- name: print the system info
   debug:
     msg: "distribution: {{ ansible_distribution }} release: {{ ansible_distribution_release }} version: {{ ansible_distribution_version }}"
 
