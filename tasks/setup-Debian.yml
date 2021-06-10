@@ -1,0 +1,17 @@
+- name: install gnupg
+  apt:
+    name: gnupg
+    state: present
+    update_cache: yes
+
+- name: import the public key used by the package manamegement system
+  shell: wget -qO - https://www.mongodb.org/static/pgp/server-{{ mongo_version }}.asc | apt-key add -
+
+- name: create the mongodb-org-{{ mongo_version }}.list in Debain {{ ansible_distribution_release }}
+  shell: echo "deb http://repo.mongodb.org/apt/debian {{ ansible_distribution_release }}/mongodb-org/{{ mongo_version }} main" | sudo tee /etc/apt/sources.list.d/mongodb-org-{{ mongo_version }}.list
+
+- name: install the MongoDB packages
+  apt:
+    name: mongodb-org
+    state: present
+    update_cache: yes
