@@ -8,7 +8,10 @@
   shell: wget -qO - https://www.mongodb.org/static/pgp/server-{{ mongo_version }}.asc | apt-key add -
 
 - name: create the mongodb-org-{{ mongo_version }}.list in Debain {{ ansible_distribution_release }}
-  shell: echo "deb http://repo.mongodb.org/apt/debian {{ ansible_distribution_release }}/mongodb-org/{{ mongo_version }} main" | sudo tee /etc/apt/sources.list.d/mongodb-org-{{ mongo_version }}.list
+  copy:
+    dest: /etc/apt/sources.list.d/mongodb-org-{{ mongo_version }}.list
+    content: deb http://repo.mongodb.org/apt/debian {{ ansible_distribution_release }}/mongodb-org/{{ mongo_version }} main
+    mode: '0644'
 
 - name: install the MongoDB packages
   apt:
