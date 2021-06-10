@@ -10,7 +10,7 @@ storage:
 systemLog:
   destination: file
   logAppend: true
-  path: /var/log/mongodb/mongod.log
+  path: {{ mongo_log_path }}
 
 # network interfaces
 net:
@@ -20,6 +20,7 @@ net:
 # how the process runs
 processManagement:
   timeZoneInfo: /usr/share/zoneinfo
+  pidFilePath: {{ mongo_pid_path }}
 
 #security:
 
