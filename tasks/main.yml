@@ -7,7 +7,6 @@
 - name: Incldue OS-specific variables
   include_vars: "{{ ansible_distribution }}.yml"
 
-
 # Setup/install tasks
 - include_tasks: setup-CentOS.yml
   when: ansible_distribution == 'CentOS'
