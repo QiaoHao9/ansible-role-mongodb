@@ -1,6 +1,6 @@
 galaxy_info:
   author: QiaoHao
   description: install mongodb by Ansible
-  company: 4Fun Inc
+  company: Personal4Fun Inc
 
   galaxy_tags: ["MongoDB"]
