@@ -1,15 +1,16 @@
-name: Notify Ansible-Galaxy
+---
+name: GitHub Action
 
 on:
-  push:
-    branches: [ main ]
+  - push
 
 jobs:
-  notify:
+  build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Build and Deploy Collection
-        uses: artis3n/ansible_galaxy_collection@v2
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: galaxy
+        uses: robertdebock/galaxy-action@1.1.0
         with:
-          api_key: '${{ secrets.GALAXY_API_KEY }}'
+          galaxy_api_key: ${{ secrets.GALAXY_API_KEY }}
