@@ -4,4 +4,6 @@ galaxy_info:
   description: install mongodb by Ansible
   company: Personal4Fun Inc
 
+  license_file: LICENSE
+
   galaxy_tags: ["MongoDB"]

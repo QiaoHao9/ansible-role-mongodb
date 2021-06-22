@@ -1,6 +1,7 @@
 # Ansible-Role-MongoDB
 
-![](https://github.com/QiaoHao9/ansible-role-mongodb/actions/workflows/galaxy.yml/badge.svg)
+[![Action: Galaxy](https://github.com/QiaoHao9/ansible-role-mongodb/actions/workflows/galaxy.yml/badge.svg)](https://github.com/QiaoHao9/ansible-role-mongodb/actions/workflows/galaxy.yml/badge.svg)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Install
 
