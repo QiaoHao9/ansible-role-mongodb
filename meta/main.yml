@@ -1,4 +1,5 @@
 galaxy_info:
+  role_name: mongodb
   author: QiaoHao
   description: install mongodb by Ansible
   company: Personal4Fun Inc
