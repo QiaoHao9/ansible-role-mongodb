@@ -3,6 +3,6 @@ mongo_version: 4.4
 mongo_ip: 0.0.0.0
 mongo_port: 27017
 
-mongo_db_path: /dev/null
+mongo_db_path: /var/lib/mongodb
 mongo_pid_path: /var/run/mongodb/mongod.pid
-mongo_log_path: /var/log/mongodb/mongod.log
+mongo_log_path: /dev/null
