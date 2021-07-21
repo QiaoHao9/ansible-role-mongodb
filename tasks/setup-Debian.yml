@@ -1,11 +1,14 @@
+- name: install apt-transport-https
+  apt:
+    name: apt-transport-https
+
 - name: install gnupg
   apt:
     name: gnupg
-    state: present
-    update_cache: yes
 
 - name: import the public key used by the package manamegement system
-  shell: wget -qO - https://www.mongodb.org/static/pgp/server-{{ mongo_version }}.asc | apt-key add -
+  apt_key:
+    url: "https://www.mongodb.org/static/pgp/server-{{ mongo_version }}.asc"
 
 - name: create the mongodb-org-{{ mongo_version }}.list in Debain {{ ansible_distribution_release }}
   copy:
@@ -16,5 +19,3 @@
 - name: install the MongoDB packages
   apt:
     name: mongodb-org
-    state: present
-    update_cache: yes
