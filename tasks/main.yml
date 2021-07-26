@@ -18,8 +18,8 @@
   ansible.builtin.file:
     path: "{{ mongo_db_path }}"
     state: directory
-    owner: mongodb
-    group: mongodb
+    owner: "{{ mongo_user }}"
+    group: "{{ mongo_user }}"
     mode: "0755"
 
 - name: copy the configuration to the server

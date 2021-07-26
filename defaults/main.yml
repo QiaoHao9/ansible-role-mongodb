@@ -1,5 +1,7 @@
 mongo_version: 4.4
 
+mongo_user: mongod
+
 mongo_ip: 0.0.0.0
 mongo_port: 27017
 

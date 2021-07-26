@@ -1,4 +1,7 @@
 ---
+- name: set chown user
+  set_fact:
+    mongo_user: mongod
 
 - name: configure the package management system
   template:
