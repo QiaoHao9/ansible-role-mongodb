@@ -20,7 +20,7 @@
 
 - fail:
     msg: "SELinux is not supported now."
-  when: ansible_selinux
+  when: ansible_selinux == "enabled"
 
 - include_tasks: configure-SELinux.yml
-  when: ansible_selinux
+  when: ansible_selinux == "enabled"
